@@ -19,7 +19,7 @@ function Copyright(props: any) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="inherit" href="javascript:;">
         Focinho Feliz
       </Link>{' '}
       {new Date().getFullYear()}
@@ -31,7 +31,7 @@ function Copyright(props: any) {
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
-export default function SignIn() {
+export default function Login() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -82,9 +82,9 @@ export default function SignIn() {
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
-              label="Lembrar-se"
+              label="Lembrar-se da minha senha"
             />
-            <Link to='/Dashboard'>
+            <Link href="/dashboard">
             <Button
               type="submit"
               fullWidth
@@ -108,7 +108,3 @@ export default function SignIn() {
     </ThemeProvider>
   );
 }
-
-<Routes>
-  <Route path='/src/routes/Dashboard/Dashboard.tsx' element={<Dashboard />}/>
-</Routes>
