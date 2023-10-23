@@ -13,6 +13,9 @@ import HomeIcon from '@mui/icons-material/Home';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import EventNoteIcon from '@mui/icons-material/EventNote';
 import BuildIcon from '@mui/icons-material/Build';
+import Login from '../Login/Login';
+import {Route , BrowserRouter, Link  } from 'react-router-dom';
+import { ListItem } from '@mui/material';
 
 export const mainListItems = (
   <React.Fragment>
@@ -52,7 +55,8 @@ export const secondaryListItems = (
       <ListItemIcon>
         <ExitToAppIcon />
       </ListItemIcon>
-      <ListItemText primary="Sair" />
-    </ListItemButton>
+      <ListItemText primary="Sair"/>
+ <Link to={"/Login"} ></Link>
+    </ListItemButton >
   </React.Fragment>
 );
