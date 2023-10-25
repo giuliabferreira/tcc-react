@@ -3,12 +3,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ListSubheader from '@mui/material/ListSubheader';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import PeopleIcon from '@mui/icons-material/People';
-import BarChartIcon from '@mui/icons-material/BarChart';
-import LayersIcon from '@mui/icons-material/Layers';
 import AssignmentIcon from '@mui/icons-material/Assignment';
-import ReorderIcon from '@mui/icons-material/Reorder';
 import HomeIcon from '@mui/icons-material/Home';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import EventNoteIcon from '@mui/icons-material/EventNote';
@@ -18,7 +13,7 @@ import {Route , BrowserRouter, Link  } from 'react-router-dom';
 import { ListItem } from '@mui/material';
 
 export const mainListItems = (
-  <React.Fragment>
+  <div>
     <ListItemButton>
       <ListItemIcon>
         <HomeIcon />
@@ -37,7 +32,7 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Agenda" />
     </ListItemButton>
-  </React.Fragment>
+  </div>
 );
 
 export const secondaryListItems = (
@@ -45,18 +40,13 @@ export const secondaryListItems = (
     <ListSubheader component="div" inset>
     Opções
     </ListSubheader>
-    <ListItemButton>
-      <ListItemIcon>
-        <BuildIcon />
-      </ListItemIcon>
-      <ListItemText primary="Configurações" />
-    </ListItemButton>
+    <Link to={"/Login"}>
     <ListItemButton>
       <ListItemIcon>
         <ExitToAppIcon />
       </ListItemIcon>
-      <ListItemText primary="Sair"/>
- <Link to={"/Login"} ></Link>
+      <ListItemText primary="Sair" />
     </ListItemButton >
+    </Link>
   </React.Fragment>
 );
